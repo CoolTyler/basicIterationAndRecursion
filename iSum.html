@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+<body>
+        <script>
+                //  Given a number "n", use iteration to get the sum of all positive integers up to and including n.
+                function iSum(num){
+                        let sum = 0;
+                        for (let idx = 1; idx <= num; idx++){
+                                sum += idx;
+                        }
+                        console.log(sum);
+                        return sum;
+                }
+
+                var sampNum = 13;
+                iSum(sampNum);
+        </script>
+        
+</body>
+</html>

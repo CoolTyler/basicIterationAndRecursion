@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+<body>
+        <script>
+                // Write an algorithm for recursive binary search.
+                function rBs(val, arr){
+                        let mid = Math.floor(arr.length / 2);
+                        let newArr = arr;
+                        console.log(arr);
+                        if (arr[mid] == val){
+                                console.log(arr[mid]);
+                                return arr[mid];
+                        }else if (arr[mid] < val){
+                                newArr = arr.slice(mid + 1, arr.length);
+                                rBs(newArr, val);
+                        }else if (arr[mid] > val){
+                                newArr = arr.slice(0, mid);
+                                rBs(newArr, val);
+                        }else {
+                                console.log(false);
+                                return false;
+                        }
+                }
+                let sampArr = [1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,111];
+                let sampVal = 44;
+                rBs(sampVal, sampArr);
+        </script>
+</body>
+</html>

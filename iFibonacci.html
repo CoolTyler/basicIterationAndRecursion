@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+<body>
+        <script>
+                // Write a function for iterative Fibonacci
+                function iFibonacci(num){
+                        let fibs = [0, 1];
+                        for (let idx = 0; idx < num; idx++){
+                                fibs.push(fibs[0] + fibs[1]);
+                                fibs.shift();
+                        }
+                        console.log(fibs[0]);
+                        return fibs[0];
+                }
+
+                let sampNum = 9;
+                iFibonacci(sampNum);
+        </script>
+</body>
+</html>
